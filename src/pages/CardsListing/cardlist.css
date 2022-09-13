@@ -1,0 +1,56 @@
+.cardlist-title{
+  color: var(--gray);
+  padding-top: 2rem;
+}
+.cardlist-conatiner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.star-icon{
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.cardlist-star{
+  position: relative;
+  margin: auto;
+  padding:.2rem;
+  margin-top: 1rem;
+  border-radius: 100%;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  background: var(--primary-light);
+}
+
+.cardlist-star:before {
+    content: '';
+    width: 2.2rem;
+    border-bottom: solid 1px var(--primary-color);
+    position: absolute;
+    left: -2.5rem;
+    top: 50%;
+    z-index: 1;
+}
+
+.cardlist-star:after {
+    content: '';
+    width: 2.2rem;
+    border-bottom: solid 1px var(--primary-color);
+    position: absolute;
+    right: -2.4rem;
+    top: 50%;
+    z-index: 1;
+}
+
+.cards{
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 1rem 8rem;
+}

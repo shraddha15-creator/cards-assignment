@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  padding: 0 2rem;
+}
+
+
+.df{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem  0;
+  font-weight: 500;
+  font-size: .8rem;
+  color: var(--gray-light);
+}
+
+.border-bottom{
+  border-bottom: 2px solid var(--gray-light);
+
+}

@@ -1,0 +1,90 @@
+.card-single{
+  width: 17rem;
+}
+
+.card-img{
+  width: 100%;
+  height: 10rem;
+  box-shadow: 1px 10px 20px -2px  var(--gray);
+  border-radius: 15px;
+}
+
+.card-image{
+  width: inherit;
+}
+
+.card-details{
+  margin-top: 1rem;
+  padding: .5rem;
+}
+
+.card-name-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: .7rem;
+}
+
+.card-name{
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.original-price{
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--gray-light);
+  text-decoration: line-through;
+}
+
+.discount-price{
+  font-weight: 700;
+  padding-left: .5rem;
+}
+
+.card-description{
+  font-size: .7rem;
+  font-weight: 500;
+  color: var(--gray-light);
+  width: 70%;
+  padding-top: .7rem;
+}
+
+.btn-add-cart{
+  text-align: center;
+  border: 2px solid var(--primary-color);
+  padding: .5rem 0;
+  margin: .7rem .5rem;
+  border-radius:5px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.qty-btn-value{
+  display: flex;
+  justify-content: space-between;
+  margin: .7rem .6rem;
+}
+
+.btn-qty{
+  background-color: var(--primary-color);
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+}
+
+.qty-value{
+  border: 1px solid var(--primary-color);
+  padding: .5rem 4rem;
+}
+
+.qty-dec{
+  border-radius: 5px 0 0 5px;
+}
+
+.qty-inc{
+  border-radius: 0 5px 5px 0;
+}
+
