@@ -40,7 +40,7 @@ export const CardsListing = () => {
 				</div>
 			</div>
 			<div className="cards">
-				{showCards.map((card) => (
+				{showCards?.map((card) => (
 					<Card key={card.id} {...card} />
 				))}
 			</div>
