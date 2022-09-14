@@ -124,18 +124,20 @@
 
 @media (max-width: 620px){
   .btn-qty{
-    padding: .3rem ;
+    padding: .3rem 1rem ;
     text-align: center;
   }
   .qty-value{
     padding: .2rem .5rem;
     font-size: .9rem;
+    width: 100%;
+    text-align: center;
   }
 }
 
 @media (max-width: 550px){
   .btn-qty{
-    padding: .1rem;
+    padding: .1rem .5rem;
     text-align: center;
   }
   .qty-value{
@@ -146,7 +148,7 @@
 
 @media (max-width: 460px){
   .btn-qty{
-    padding: 2px;
+    padding: 5px;
     text-align: center;
   }
   .qty-value{
