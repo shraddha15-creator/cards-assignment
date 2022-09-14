@@ -12,11 +12,6 @@ export const CardsListing = () => {
 	const { cart } = useSelector((state) => state.cart);
 
 	useEffect(() => {
-		dispatch(getData());
-		// eslint-disable-next-line
-	}, []);
-
-	useEffect(() => {
 		const cart = JSON.parse(localStorage.getItem("cart"));
 		dispatch(getCartItems(cart));
 		// eslint-disable-next-line
