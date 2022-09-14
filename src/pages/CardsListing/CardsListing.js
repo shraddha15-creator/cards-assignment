@@ -4,14 +4,16 @@ import { AiOutlineStar } from "react-icons/ai";
 import { Card } from "../../components";
 import { getData } from "../../app/features/cardsSlice/cardSlice";
 import { getCartItems } from "../../app/features/cartSlice/cartSlice";
+import CardsDb from "../../DB/CardsDb.json";
 import "./cardlist.css";
 
 export const CardsListing = () => {
 	const dispatch = useDispatch();
-	const cards = useSelector((state) => state.cards);
 	const { cart } = useSelector((state) => state.cart);
 
-	const showCards = cards.cards;
+	console.log("====================================");
+	console.log(CardsDb, "comingfrom JSON");
+	console.log("====================================");
 
 	useEffect(() => {
 		dispatch(getData());
@@ -40,7 +42,7 @@ export const CardsListing = () => {
 				</div>
 			</div>
 			<div className="cards">
-				{showCards?.map((card) => (
+				{CardsDb?.map((card) => (
 					<Card key={card.id} {...card} />
 				))}
 			</div>
