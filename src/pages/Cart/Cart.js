@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { BsArrowLeftShort } from "react-icons/bs";
 import { getCartItems } from "../../app/features/cartSlice/cartSlice";
 import "./cart.css";
@@ -25,6 +26,9 @@ export const Cart = () => {
 
 	return (
 		<div className="cart-container">
+			<Helmet>
+				<title>Happay | Cart</title>
+			</Helmet>
 			<Link to="/" className="back-btn">
 				<BsArrowLeftShort className="back-icon" /> Back to Home
 			</Link>
