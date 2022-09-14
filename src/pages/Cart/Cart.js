@@ -29,10 +29,9 @@ export const Cart = () => {
 			<Link to="/" className="back-btn">
 				<BsArrowLeftShort className="back-icon" /> Back to Home
 			</Link>
-			<h3 className="order-summery">Order Summery ({cart.length} Items)</h3>
-			{cart.length > 0 ? (
+			<h3 className="order-summery">Order Summery ({cart?.length} Items)</h3>
+			{cart?.length > 0 ? (
 				<div className="cart-details">
-					{/* --- */}
 					<div className="products-qty-price">
 						<div className="products-details">
 							<p>s.no.</p>
@@ -41,10 +40,10 @@ export const Cart = () => {
 						</div>
 						{cart.map((cartItem, idx) => {
 							return (
-								<div key={cartItem.id} className="single-product-qty">
+								<div key={cartItem?.id} className="single-product-qty">
 									<p className="product-sr-no">{idx + 1}</p>
 									<p className="product-name">
-										{cartItem.name
+										{cartItem?.name
 											.split(" ")
 											.map((i) => i.charAt(0).toUpperCase() + i.slice(1))
 											.join(" ")}
@@ -114,7 +113,7 @@ export const Cart = () => {
 					</div>
 				</div>
 			) : (
-				<h1>Cart is Empty</h1>
+				<h1 className="empty-cart">Cart is Empty</h1>
 			)}
 		</div>
 	);
