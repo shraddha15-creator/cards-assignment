@@ -24,7 +24,7 @@ export const Navbar = () => {
 			) : (
 				<Link to="/cart" className="navbar-right">
 					<FiShoppingCart className="cart-icon" />
-					<div className="cart-badge">{cart.length}</div>
+					<div className="cart-badge">{cart?.length}</div>
 					<img src={Avtaar} alt="avtaar" className="avtaar" />
 				</Link>
 			)}

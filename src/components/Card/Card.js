@@ -12,6 +12,12 @@ export const Card = (card) => {
 	return (
 		<div className="card-single">
 			<div className="card-img">
+				{card?.original_price && (
+					<div className="ribbon ">
+						30% OFF<span className="ribbon-sm"></span>
+					</div>
+				)}
+
 				<img src={card.img_url} className="card-image" alt="card-img" />
 			</div>
 			<div className="card-details">
