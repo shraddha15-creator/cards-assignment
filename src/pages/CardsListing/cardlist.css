@@ -48,9 +48,35 @@
 
 .cards{
   display: flex;
+  align-items: center;
+  /* justify-content: center; */
   gap: 2rem;
   margin-top: 2rem;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  padding: 1rem 8rem;
+  margin-left: 10rem;
+}
+
+@media (max-width: 1400px){
+  .cards{
+  margin-left: 7rem;
+  }
+}
+
+@media (max-width: 1225px){
+  .cards{
+  margin-left: 9rem;
+  }
+}
+
+@media (max-width: 1010px){
+  .cards{
+  margin-left: 6rem;
+  }
+}
+
+@media (max-width: 810px){
+  .cards{
+  flex-direction: column;
+  margin-left: 1rem;
+  }
 }

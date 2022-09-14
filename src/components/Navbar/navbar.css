@@ -22,7 +22,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
+}
+
+.navbar-shadow{
+  box-shadow: 1px 1px 5px var(--gray-light);
 }
 
 
@@ -30,6 +34,7 @@
   display: flex;
   align-items: center;
   gap: .5rem;
+  text-decoration: none;
 }
 
 .navbar-right{
@@ -39,7 +44,7 @@
 
 .brand-title{
   font-weight: 600;
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
 .cart-icon{

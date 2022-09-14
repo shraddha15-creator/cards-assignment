@@ -1,20 +1,34 @@
-import "./cardlist.css";
-import { AiOutlineStar } from "react-icons/ai";
-import { Card } from "../../components/Card/Card";
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AiOutlineStar } from "react-icons/ai";
+import { Card } from "../../components";
 import { getData } from "../../app/features/cardsSlice/cardSlice";
+import { getCartItems } from "../../app/features/cartSlice/cartSlice";
+import "./cardlist.css";
 
 export const CardsListing = () => {
 	const dispatch = useDispatch();
 	const cards = useSelector((state) => state.cards);
-	console.log("from CARDDDDSSS ", cards.cards);
+	const { cart } = useSelector((state) => state.cart);
 
 	const showCards = cards.cards;
-	console.log(showCards, " show cardsssss");
 
 	useEffect(() => {
 		dispatch(getData());
+		// eslint-disable-next-line
+	}, []);
+
+	useEffect(() => {
+		const cart = JSON.parse(localStorage.getItem("cart"));
+		dispatch(getCartItems(cart));
+		// eslint-disable-next-line
+	}, []);
+
+	useEffect(() => {
+		if (JSON.parse(localStorage.getItem("cart")) === null) {
+			localStorage.setItem("cart", JSON.stringify(cart));
+		}
+		// eslint-disable-next-line
 	}, []);
 
 	return (

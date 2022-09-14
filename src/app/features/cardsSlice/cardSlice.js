@@ -9,7 +9,6 @@ export const getData = createAsyncThunk(
 			const response = await axios.get(
 				"https://react-coding-assignment.s3.ap-south-1.amazonaws.com/cards/items.json"
 			);
-			console.log(response.data, "responsseeeeee");
 			return response.data;
 		} catch (error) {
 			rejectWithValue(error.response.data);
