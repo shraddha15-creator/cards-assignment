@@ -11,10 +11,6 @@ export const CardsListing = () => {
 	const dispatch = useDispatch();
 	const { cart } = useSelector((state) => state.cart);
 
-	console.log("====================================");
-	console.log(CardsDb, "comingfrom JSON");
-	console.log("====================================");
-
 	useEffect(() => {
 		dispatch(getData());
 		// eslint-disable-next-line
